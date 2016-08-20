@@ -1,25 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="popoverView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-qI-9aj">
+                                <rect key="frame" x="101" y="297" width="173" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2xa-Kh-pTZ" kind="popoverPresentation" identifier="showView" popoverAnchorView="IXd-qI-9aj" id="F0k-dO-pSr">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IXd-qI-9aj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="aMb-Mj-pC3"/>
+                            <constraint firstItem="IXd-qI-9aj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="277" id="iBR-q9-qQu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IXd-qI-9aj" secondAttribute="trailing" constant="85" id="phc-Rt-m8X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IXd-qI-9aj" secondAttribute="bottom" constant="296" id="y4V-uS-hVH"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-39.5" y="-17.5"/>
+        </scene>
+        <!--Pop Over-->
+        <scene sceneID="OH7-4d-21u">
+            <objects>
+                <viewController id="2xa-Kh-pTZ" customClass="PopOver" customModule="popoverView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f3M-dS-N04"/>
+                        <viewControllerLayoutGuide type="bottom" id="82u-Sc-oWz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zfw-vx-2Na">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxS-rC-zld">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="29"/>
+                                <state key="normal" image="like.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="jAV-cm-sqS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJA-ab-hfE">
+                                <rect key="frame" x="38" y="0.0" width="30" height="29"/>
+                                <state key="normal" image="love.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="Lf7-MT-KzT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxU-jy-je2">
+                                <rect key="frame" x="76" y="1" width="30" height="29"/>
+                                <state key="normal" image="haha.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="1D0-ky-MYP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-S8-n3e">
+                                <rect key="frame" x="152" y="1" width="30" height="29"/>
+                                <state key="normal" image="sad.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="TvX-92-Zet"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upv-qw-6yJ">
+                                <rect key="frame" x="190" y="0.0" width="30" height="29"/>
+                                <state key="normal" image="angry.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="aFk-Ys-d9T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umR-pr-J0K">
+                                <rect key="frame" x="114" y="1" width="30" height="29"/>
+                                <state key="normal" image="wow.png"/>
+                                <connections>
+                                    <action selector="pop_action:" destination="2xa-Kh-pTZ" eventType="touchUpInside" id="30M-ag-Ec0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="220" height="30"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scg-5y-eWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915" y="-45"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="angry.png" width="30" height="29"/>
+        <image name="haha.png" width="30" height="29"/>
+        <image name="like.png" width="30" height="29"/>
+        <image name="love.png" width="30" height="29"/>
+        <image name="sad.png" width="30" height="29"/>
+        <image name="wow.png" width="30" height="29"/>
+    </resources>
 </document>
