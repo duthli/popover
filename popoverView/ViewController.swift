@@ -19,7 +19,7 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate{
         if(segue.identifier == "showView"){
             let controller = segue.destinationViewController
             controller.popoverPresentationController?.delegate = self
-            controller.preferredContentSize = CGSize(width: 220, height: 30)
+            controller.preferredContentSize = CGSize(width: 240, height: 30)
         }
     }
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {

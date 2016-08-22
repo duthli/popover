@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,24 +17,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-qI-9aj">
-                                <rect key="frame" x="101" y="297" width="173" height="74"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar1.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR8-mT-cbf">
+                                <rect key="frame" x="12" y="28" width="67" height="57"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vi8-3O-Yws">
+                                <rect key="frame" x="12" y="515" width="67" height="57"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="May 15 at 6:19 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2U-i3-ldP">
+                                <rect key="frame" x="87" y="59" width="111" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afR-Qk-ibY">
+                                <rect key="frame" x="80" y="28" width="176" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="David beckham"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-qI-9aj">
+                                <rect key="frame" x="12" y="458" width="39" height="29"/>
+                                <state key="normal" image="greyLike.png"/>
                                 <connections>
                                     <segue destination="2xa-Kh-pTZ" kind="popoverPresentation" identifier="showView" popoverAnchorView="IXd-qI-9aj" id="F0k-dO-pSr">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylV-sY-8PU">
+                                <rect key="frame" x="114" y="459" width="57" height="30"/>
+                                <state key="normal" image="comment.png">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-Da-XLs">
+                                <rect key="frame" x="159" y="460" width="86" height="29"/>
+                                <state key="normal" title="Comment">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYs-6E-8ET">
+                                <rect key="frame" x="289" y="458" width="86" height="29"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzM-ms-9nK">
+                                <rect key="frame" x="273" y="459" width="30" height="30"/>
+                                <state key="normal" image="share.png">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zu6-bP-r74">
+                                <rect key="frame" x="87" y="529" width="276" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img.png" translatesAutoresizingMaskIntoConstraints="NO" id="jxi-ew-UyM">
+                                <rect key="frame" x="12" y="134" width="343" height="316"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="đây là bài tập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-pt-je5">
+                                <rect key="frame" x="12" y="86" width="343" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf3-Hb-M7k">
+                                <rect key="frame" x="59" y="458" width="39" height="29"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IXd-qI-9aj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="aMb-Mj-pC3"/>
-                            <constraint firstItem="IXd-qI-9aj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="277" id="iBR-q9-qQu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IXd-qI-9aj" secondAttribute="trailing" constant="85" id="phc-Rt-m8X"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IXd-qI-9aj" secondAttribute="bottom" constant="296" id="y4V-uS-hVH"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -111,10 +164,16 @@
     </scenes>
     <resources>
         <image name="angry.png" width="30" height="29"/>
+        <image name="avatar1.png" width="80" height="78"/>
+        <image name="avatar2.png" width="80" height="80"/>
+        <image name="comment.png" width="30" height="30"/>
+        <image name="greyLike.png" width="40" height="40"/>
         <image name="haha.png" width="30" height="29"/>
+        <image name="img.png" width="800" height="864"/>
         <image name="like.png" width="30" height="29"/>
         <image name="love.png" width="30" height="29"/>
         <image name="sad.png" width="30" height="29"/>
+        <image name="share.png" width="30" height="30"/>
         <image name="wow.png" width="30" height="29"/>
     </resources>
 </document>
